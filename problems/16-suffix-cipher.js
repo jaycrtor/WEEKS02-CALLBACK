@@ -28,9 +28,13 @@ function suffixCipher(sentence, cipher) {
   let suffixes = Object.keys(cipher)
   let newSentence = wordsArr.map(word =>{
     for(let suffix of suffixes) {
-      if(word.endsWith())
+      if(word.endsWith(suffix)){
+        return cipher[suffix](word)
+      }
     }
+    return word
   })
+  return newSentence.join(' ')
 
 
   // let arr = sentence.split(' ');
