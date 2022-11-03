@@ -7,6 +7,20 @@ Do not use the built in Array.every.
 
 Examples:
 
+
+
+
+*******************************************************************************/
+
+function myEvery(array, cb) {
+    
+
+
+
+
+
+
+}
 let isEven = function (num) {
     return num % 2 === 0;
 };
@@ -14,17 +28,10 @@ let isEven = function (num) {
 let hasO = function(string) {
     return string.includes('o');
 };
-
 console.log(myEvery([4, 8, 6, 10], isEven));            // true
 console.log(myEvery([4, 7, 6, 10], isEven));            // false
 console.log(myEvery(['book', 'door'], hasO));           // true
 console.log(myEvery(['book', 'door', 'pen'], hasO));    // false
-*******************************************************************************/
-
-function myEvery(array, cb) {
-    // Your code here
-}
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
     module.exports = myEvery;

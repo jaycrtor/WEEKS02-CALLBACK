@@ -10,6 +10,14 @@ problem.
 
 Examples:
 
+
+
+AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
+    (optional if you already asked a question for this problem.)
+- Explain how you are using both of the callbacks in the function.
+- What do you expect each callback function to be returning?
+- How many times are you calling each callback function?
+*******************************************************************************/
 function isEven(n) {
     return n % 2 === 0;
 }
@@ -34,16 +42,21 @@ console.log(selectiveMap([-10, 4, 7, 6, -2, -9], isEven, flipSign));
 
 console.log(selectiveMap([-10, 4, 7, 6, -2, -9], isPositive, square));
 // [-10, 16, 49, 36, -2, -9]
-
-AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
-    (optional if you already asked a question for this problem.)
-- Explain how you are using both of the callbacks in the function.
-- What do you expect each callback function to be returning?
-- How many times are you calling each callback function?
-*******************************************************************************/
-
+///////
+// 1. in (array, cb1 , cb2)
+// 2. out new arr where el replaced with result of calling cb2 on element
+// if cb1 false
+// el should not be changed in the new array
 function selectiveMap(array, selector, mapper) {
-    // Your code here
+    let arr =[]
+     array.forEach(el =>{
+    if(selector(el)){
+       arr.push(mapper(el))
+    } else {
+        arr.push(el)
+    }
+    })
+    return arr
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

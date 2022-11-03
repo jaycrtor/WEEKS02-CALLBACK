@@ -5,6 +5,26 @@ exactly `number` elements of the array that return true when passed into the cal
 
 Examples:
 
+
+
+*******************************************************************************/
+
+function exactly(array, num, cb) {
+  let count = 0 ;
+  array.forEach(el =>{
+    if(cb(el)) count++;
+    return count
+
+  })
+  return count === num
+
+
+
+
+
+
+  // Your code here
+}
 let result1 = exactly([18, 5, 32, 7, 100], 3, function (n) {
     return n % 2 === 0;
 });
@@ -24,13 +44,6 @@ let result4 = exactly(['follow', 'the', 'yellow', 'brick', 'road'], 0, function 
     return str.includes('x');
 });
 console.log(result4); // true
-
-*******************************************************************************/
-
-function exactly(array, num, cb) {
-  // Your code here
-}
-
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = exactly;
